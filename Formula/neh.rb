@@ -13,7 +13,7 @@ class Neh < Formula
   on_macos do
     on_intel do
       url "https://github.com/neh-cli/neh/releases/download/v0.0.5/neh_Darwin_x86_64.tar.gz"
-      sha256 "59ec1879e44182f3d6a9a7dc3f0916680c6749006128e9849708117d4efe88ef"
+      sha256 "58fa6aadae30164ea93599eaca952661b5297170c83cc1e58a9e7365ce351af8"
 
       def install
         bin.install "neh"
@@ -21,7 +21,7 @@ class Neh < Formula
     end
     on_arm do
       url "https://github.com/neh-cli/neh/releases/download/v0.0.5/neh_Darwin_arm64.tar.gz"
-      sha256 "6fff34677e1c99af19385b94af13ea2722aac97cb461f9624399dc77d70d08b6"
+      sha256 "dc7a0f32fe602ae2104fba53676047cec2c55eded486408c65b255b2ed60c3f4"
 
       def install
         bin.install "neh"
@@ -33,7 +33,7 @@ class Neh < Formula
     on_intel do
       if Hardware::CPU.is_64_bit?
         url "https://github.com/neh-cli/neh/releases/download/v0.0.5/neh_Linux_x86_64.tar.gz"
-        sha256 "917d5ad4a7255f8027e66e0cc504f5feb125887082c28b0bcb0cba29aa70887f"
+        sha256 "0a7c7fcc59f7000305e33607aca7fc101a52b467ff7524d196fe733f1f83696d"
 
         def install
           bin.install "neh"
@@ -43,7 +43,7 @@ class Neh < Formula
     on_arm do
       if Hardware::CPU.is_64_bit?
         url "https://github.com/neh-cli/neh/releases/download/v0.0.5/neh_Linux_arm64.tar.gz"
-        sha256 "7400ce13a92cb03446572082c7d21ffe9c87cf2e08972585bf45ea0bfd603909"
+        sha256 "d1fba92cfb65b3114e675cbc29e020324814f54aa2790de7b4e06388803b720d"
 
         def install
           bin.install "neh"
