@@ -5,23 +5,23 @@
 class Neh < Formula
   desc "Lightweight CLI client for interacting with AI using large language models (LLM)"
   homepage "https://github.com/neh-cli/neh"
-  version "0.0.5"
+  version "0.0.6"
   license "MIT"
 
   depends_on "git"
 
   on_macos do
     on_intel do
-      url "https://github.com/neh-cli/neh/releases/download/v0.0.5/neh_Darwin_x86_64.tar.gz"
-      sha256 "baf70792429b572770ce117202337729ab2f0dcf7bdd8eacfba6b6e6e78af114"
+      url "https://github.com/neh-cli/neh/releases/download/v0.0.6/neh_Darwin_x86_64.tar.gz"
+      sha256 "d8b712d2deacdd5ac493661c6fdeec7401c50ca002cd7885e634904116913832"
 
       def install
         bin.install "neh"
       end
     end
     on_arm do
-      url "https://github.com/neh-cli/neh/releases/download/v0.0.5/neh_Darwin_arm64.tar.gz"
-      sha256 "c75e266ea46898e89c23d22a1412ec61cd5aa92ada76c0e592d966b9ab0e6516"
+      url "https://github.com/neh-cli/neh/releases/download/v0.0.6/neh_Darwin_arm64.tar.gz"
+      sha256 "b672854c4290cafdf5aa273fe0b479182f302b6eb2e161308789251c65748c4b"
 
       def install
         bin.install "neh"
@@ -32,8 +32,8 @@ class Neh < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/neh-cli/neh/releases/download/v0.0.5/neh_Linux_x86_64.tar.gz"
-        sha256 "537bbf321e3f53d0e868a0339a0fe87b1b61a3f4d300ef2c31544eb0d06eba0a"
+        url "https://github.com/neh-cli/neh/releases/download/v0.0.6/neh_Linux_x86_64.tar.gz"
+        sha256 "8fae9636ee04a7fc766e960a4043a5fa83faacd4da4003f6bac9ed10d363238b"
 
         def install
           bin.install "neh"
@@ -42,8 +42,8 @@ class Neh < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/neh-cli/neh/releases/download/v0.0.5/neh_Linux_arm64.tar.gz"
-        sha256 "96daf3519683bfb3551779c21350b913def2e76ca785f125e4ccfbad3502a157"
+        url "https://github.com/neh-cli/neh/releases/download/v0.0.6/neh_Linux_arm64.tar.gz"
+        sha256 "bf8f611d4afffd38ff8a2509a289a5b3d8d76c1ca59132aaf64d4414a82a8382"
 
         def install
           bin.install "neh"
