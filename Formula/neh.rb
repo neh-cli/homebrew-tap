@@ -5,23 +5,23 @@
 class Neh < Formula
   desc "neh is a sleek CLI application designed for high-speed, real-time interaction with AI specializing in Large Language Models."
   homepage "https://github.com/neh-cli/neh"
-  version "0.0.7"
+  version "0.0.8"
   license "MIT"
 
   depends_on "git"
 
   on_macos do
     on_intel do
-      url "https://github.com/neh-cli/neh/releases/download/v0.0.7/neh_Darwin_x86_64.tar.gz"
-      sha256 "d478b0e078538a8db453f1f9e21a9ec21ee7107b2bd547a435e57b06da303dfa"
+      url "https://github.com/neh-cli/neh/releases/download/v0.0.8/neh_Darwin_x86_64.tar.gz"
+      sha256 "83fee9015dc2176aa993d8d10e82ed64c158fc96a5a3f8cb36e61226e7358d5f"
 
       def install
         bin.install "neh"
       end
     end
     on_arm do
-      url "https://github.com/neh-cli/neh/releases/download/v0.0.7/neh_Darwin_arm64.tar.gz"
-      sha256 "3b9c7e6c61a20fce2a76f68c4c755d0f450a3975ca28329a4d7a7883cad8d756"
+      url "https://github.com/neh-cli/neh/releases/download/v0.0.8/neh_Darwin_arm64.tar.gz"
+      sha256 "2ce98245f1cd8339039710cf887200527b0dc1589f47e19111a6994857811ebc"
 
       def install
         bin.install "neh"
@@ -32,8 +32,8 @@ class Neh < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/neh-cli/neh/releases/download/v0.0.7/neh_Linux_x86_64.tar.gz"
-        sha256 "c9385acf14b64dbc2a39f981660b36e47c3f64ead0de3f5f179b7f4f6c1e4a46"
+        url "https://github.com/neh-cli/neh/releases/download/v0.0.8/neh_Linux_x86_64.tar.gz"
+        sha256 "b659ea786109174a4513b11c9f60d31bd1c5a0ca7ebeb0372c9df87cb5f968b0"
 
         def install
           bin.install "neh"
@@ -42,8 +42,8 @@ class Neh < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/neh-cli/neh/releases/download/v0.0.7/neh_Linux_arm64.tar.gz"
-        sha256 "f5b5c7c2b9734e766efa5a2f3d0f70226b60b0f81a5cfa9a9bb1806e562079c4"
+        url "https://github.com/neh-cli/neh/releases/download/v0.0.8/neh_Linux_arm64.tar.gz"
+        sha256 "703b6445bd2ab9a8400910efc7df0147fa5ead36b263f15d37f416c3a7f11f6a"
 
         def install
           bin.install "neh"
