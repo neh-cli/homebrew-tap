@@ -6,23 +6,23 @@ class Neh < Formula
   desc "neh is a sleek CLI application designed for high-speed, real-time
 interaction with AI specializing in Large Language Models."
   homepage "https://github.com/neh-cli/neh"
-  version "0.0.18"
+  version "0.0.19"
   license "MIT"
 
   depends_on "git"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/neh-cli/neh/releases/download/v0.0.18/neh_Darwin_x86_64.tar.gz"
-      sha256 "9c694a393faf3718c0cd1b60de5a4732d6f872c4c16681ef1ac08a7ce15126d3"
+      url "https://github.com/neh-cli/neh/releases/download/v0.0.19/neh_Darwin_x86_64.tar.gz"
+      sha256 "9800bb1747589b8b337d90a5997b17742a1e6c160c18cd6a1bcc255b77ea0b71"
 
       def install
         bin.install "neh"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/neh-cli/neh/releases/download/v0.0.18/neh_Darwin_arm64.tar.gz"
-      sha256 "61c685ea787b42284c1491a2fa52578f337b53b9a47908b9d55985e66805057c"
+      url "https://github.com/neh-cli/neh/releases/download/v0.0.19/neh_Darwin_arm64.tar.gz"
+      sha256 "e6a52c315db68b540a948ce97f8b8508c7734c5bead3900cbb99305c1591ee06"
 
       def install
         bin.install "neh"
@@ -33,8 +33,8 @@ interaction with AI specializing in Large Language Models."
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/neh-cli/neh/releases/download/v0.0.18/neh_Linux_x86_64.tar.gz"
-        sha256 "9a0a1fdb947dd34ea61d2582c52da45d37e5ce5ead3d4c12ed59088a345c963a"
+        url "https://github.com/neh-cli/neh/releases/download/v0.0.19/neh_Linux_x86_64.tar.gz"
+        sha256 "299b099c18ccc183cf1bc7a2f854019804ac4af9a588653677c31ec4f9c7801b"
 
         def install
           bin.install "neh"
@@ -43,8 +43,8 @@ interaction with AI specializing in Large Language Models."
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/neh-cli/neh/releases/download/v0.0.18/neh_Linux_arm64.tar.gz"
-        sha256 "ef2a58c84bebfe834b4fc0a402e8c6168889eb6792735d39885649e85e6161dd"
+        url "https://github.com/neh-cli/neh/releases/download/v0.0.19/neh_Linux_arm64.tar.gz"
+        sha256 "73f92c4f119393d1bc1380ae089ad1ffec0580f3b206f7d47fc3e0a10aed7105"
 
         def install
           bin.install "neh"
