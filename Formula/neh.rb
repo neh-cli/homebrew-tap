@@ -6,23 +6,23 @@ class Neh < Formula
   desc "neh is a sleek CLI application designed for high-speed, real-time
 interaction with AI specializing in Large Language Models."
   homepage "https://github.com/neh-cli/neh"
-  version "0.0.31"
+  version "0.0.32"
   license "MIT"
 
   depends_on "git"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/neh-cli/neh/releases/download/v0.0.31/neh_Darwin_x86_64.tar.gz"
-      sha256 "bf98c84d6cf0e3e649894305495ba5fb9d00d1ef181dbeac55246bd882a6a1ac"
+      url "https://github.com/neh-cli/neh/releases/download/v0.0.32/neh_Darwin_x86_64.tar.gz"
+      sha256 "b2856b63d072e3e60bca86ab243922bff5079d5d9caf8f1cbc7262852e73f21b"
 
       def install
         bin.install "neh"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/neh-cli/neh/releases/download/v0.0.31/neh_Darwin_arm64.tar.gz"
-      sha256 "5b189b38178936448b1fd2279bc7f70b6743d43f794b1a8d2a164a1672e6f5c7"
+      url "https://github.com/neh-cli/neh/releases/download/v0.0.32/neh_Darwin_arm64.tar.gz"
+      sha256 "99f5761df7a19c07ef1c78ea1c93ee6790472dd4ddd91f6d01c1c435e29f301e"
 
       def install
         bin.install "neh"
@@ -32,36 +32,36 @@ interaction with AI specializing in Large Language Models."
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/neh-cli/neh/releases/download/v0.0.31/neh_Linux_x86_64.tar.gz"
-      sha256 "f77d2736e94af32a9dc4ce36045ef15452100a6eaafa5c4ff9441b7d3fee5c36"
+      url "https://github.com/neh-cli/neh/releases/download/v0.0.32/neh_Linux_x86_64.tar.gz"
+      sha256 "f386e492ff1bbf8954cde2c2a86d8a9d3e01b9aeeed194741812127cf478fc76"
       def install
         bin.install "neh"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/neh-cli/neh/releases/download/v0.0.31/neh_Linux_arm64.tar.gz"
-      sha256 "6ff5f2b67ad13dfdb50173b507a0fc1305e2f9e7faae9a0ef8047df69683dcef"
+      url "https://github.com/neh-cli/neh/releases/download/v0.0.32/neh_Linux_arm64.tar.gz"
+      sha256 "9b7032b156395a2e7594719f310e8062e53badd764322d5f7fa79c1aa7794435"
       def install
         bin.install "neh"
       end
     end
   end
 
-  def post_install
-    if ENV["SHELL"]&.include?("zsh")
-      puts <<~EOS
+  def caveats
+    <<~EOS
+      if ENV["SHELL"]&.include?("zsh")
+        <<~EOS
+          For zsh users:
+          To avoid "no matches found" errors with special characters,
+          add the following alias to your ~/.zshrc:
 
-        \e[33m==>\e[0m \e[1mFor zsh users:\e[0m
-        To avoid "no matches found" errors with special characters,
-        add the following alias to your ~/.zshrc:
+            alias neh='noglob neh'
 
-          \e[32malias neh='noglob neh'\e[0m
-
-        Then reload your shell configuration:
-          \e[32msource ~/.zshrc\e[0m
-
-      EOS
-    end
+          Then reload your shell configuration:
+            source ~/.zshrc
+        EOS
+      end
+    EOS
   end
 
   test do
